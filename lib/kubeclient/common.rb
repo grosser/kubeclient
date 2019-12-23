@@ -136,6 +136,10 @@ module Kubeclient
       @discovered = true
     end
 
+    def discovered?
+      @discovered
+    end
+
     def self.parse_definition(kind, name)
       # Kubernetes gives us 3 inputs:
       #   kind: "ComponentStatus", "NetworkPolicy", "Endpoints"
